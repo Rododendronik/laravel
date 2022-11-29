@@ -1,0 +1,69 @@
+html {
+    scroll-behavior: smooth;
+    --navbar-height: 3rem;
+    --landing-page-height: 60vh;
+}
+body{
+    margin:0;
+    background: white;
+}
+
+.icon {
+
+    background-image: url("./images/icon.png");
+
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    height: 100%;
+    width: 70vw;
+    margin: auto;
+}
+
+.u-info {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: wrap;
+    column-gap: 2.5rem;
+    background-color: #B6E2A1;
+    padding: 1rem 3rem;
+    max-width: 30rem;
+}
+
+.animal-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 5rem;
+    padding: 2rem;
+    background-color: whitesmoke;
+
+}
+
+.animal-profile h1{
+    color: black;
+}
+
+.animal-profile img{
+    width: 20%;
+    max-width: 12rem;
+}
+.buttons{
+    cursor: pointer;
+    display: flex;
+    justify-content: right;
+    margin:0;
+    font-size: 25px;
+    padding: 30px;
+}

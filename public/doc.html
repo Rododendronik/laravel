@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0067)https://www.fit.vutbr.cz/study/courses/IIS/private/projekt/doc.html -->
+<html><head><meta charset="UTF-8" http-equiv="Content-Type" content="text/html; charset=ISO-8859-2" lang="cs-cz">
+    
+    <title>Projekt IIS</title>
+    <style type="text/css">
+		table { border-collapse: collapse; }
+		td, th { border: 1px solid black; padding: 0.3em 0.5em; text-align: left; }
+		dt { font-weight: bold; margin-top: 0.5em; }
+    </style>
+</head>
+<body>
+
+<!-- Zkontrolujte prosím nastavení kódování v hlavičce dokumentu 
+	podle použitého editoru -->
+
+<h1>Zvířecí útulek</h1> <!-- Nahradte názvem svého zadání -->
+
+<dl>
+	<dt>Autoři</dt>
+	<dd>Martin Barborík <!-- Nahraďte skutečným jménem a e-mailem autora a popisem činnosti -->
+		<a href="mailto:xxbarbo10@stud.fit.vutbr.cz">xbarbo10@stud.fit.vutbr.cz</a> - Stránky pečovatele a veterináře, požadavky na veterináře, front end, databáze
+		
+	</dd>
+	<dd>Samuel Budai <!-- Nahraďte skutečným jménem a e-mailem autora a popisem činnosti -->
+		<a href="mailto:xbudai01@stud.fit.vutbr.cz">xbudai01@stud.fit.vutbr.cz</a> - Přihlašovvání a rezervační systém, stránky admina, kalendář, front end, video
+		
+	</dd>
+	<dd>Zuzana Burešová <!-- Nahraďte skutečným jménem a e-mailem autora a popisem činnosti -->
+	<a href="mailto:xbures35@stud.fit.vutbr.cz">xbures35@stud.fit.vutbr.cz</a> -  Stránky zvířátek, historie rezervací, front end, databáze, dokumentace
+		
+	</dd>
+	<dt>URL aplikace</dt>
+	<dd><a href="https://www.stud.fit.vutbr.cz/~xbudai01/IIS/">https://www.stud.fit.vutbr.cz/~xbudai01/IIS/</a></dd>
+</dl>
+
+<h2>Uživatelé systému pro testování</h2>
+<table>
+<tbody><tr><th>Email</th><th>Heslo</th><th>Role</th></tr>
+<tr><td>admin@meow.com</td><td>meowmeow</td><td>Administrátor</td></tr>
+<tr><td>ct@meow.com</td><td>123456</td><td>Pečovatel</td></tr>
+<tr><td>vt@meow.com</td><td>123456</td><td>Veterinář</td></tr>
+<tr><td>user1@gmail.com</td><td>123456</td><td>Dobrovolník - ověřený</td></tr>
+<tr><td>user2@gmail.com</td><td>123456</td><td>Dobrovolník - neověřený</td></tr>
+</tbody></table>
+
+<h3>Video</h3>
+
+<dd><a href="https://drive.google.com/file/d/12-ex1ueWvibg-EvRGXRLTNudVTotZFif/view?usp=sharing">Odkaz na video</a></dd>
+
+<h2>Implementace</h2>
+<p> <b>Složky a jejich soubory:</b> <br><br>
+	<b> admin </b> - složka obsahující soubory řešící jednotlivé případy užití admina 
+	<ul>
+	<li>Zobrazování uživatelů/zaměstnanců - <i>admin.php, fill_user.php</i> a <i>fetch_users.php</i> </li>
+	<li>Editování uživatelů - <i>updateuser.php</i></li>
+	<li> Vytváření nových zaměstnanců (veterinář/pečovatel) - <i>createEmployee.php</i> </li>
+	</ul>
+	<b> caretaker </b> - složka obsahující soubory řešící jednotlivé případy užití pečovatele
+	<ul>
+	<li>Zobrazování a spracování zvířátek - <i> caretaker.php, aad_animal.php, animal_edit.php, deleteAnimal.php </i> a <i>animal_view.php</i> </li>
+	<li>Ověřování dobrovolníků - <i> volunteers.php, fetch_volunteers.php </i> a <i>verifyVolunteer.php</i></li>
+	<li>Rezervace- <i>reservationsbuilder.php, reservations.php</i> a <i>managereservations.php</i> </li>
+	<li>Vytváření požadavků na veterináře - <i> animal_view.php, fetch_treatments.php, fetch_treatment_requests.php, deleteRequest.php</i> a složka <i>treatment_and_request</i> </li>
+	</ul>
+	<b> vet </b> - složka obsahující soubory řešící jednotlivé případy užití veterináře
+	<ul>
+	<li> Zobrazování dostupných/přijatých požadavků - <i>veterinarian.php</i> a <i>fetch_treatment_requests.php</i> </li>
+	<li>Práce s požadavky - <i>acceptTreatmentRequest.php, returnTreatmentRequest</i> a <i>treatment_history.php</i> </li>
+	</ul>
+	<b> volunteer </b> - složka obsahující soubory řešící jednotlivé případy užití dobrovolníka
+	<ul>
+	<li>Zobrazování zvířátek v útulku- <i>welcome.php, animal.php</i> a <i>fetch_animal.php</i></li>
+	<li>Rezervování zvířat - přes složku <i> calendar </i></li>
+	<li>Zobrazování historie rezervací - <i> history.php </i> a <i>find_history.php</i></li>
+	</ul>
+<b>Ostatní soubory: </b><br>
+<ul>
+	<li><b>index.php</b> - úvodní stránka s informacema o útulku</li>
+	<li><b>animals.php</b>, <b>find_animal.php</b> a <b>animal.php</b> - stránka zobrazující zvířátka pro nepřiklášeného uživatele
+	s možností filtrace a následným zobrazením zvířátka</li>
+	<li><b>login.php</b>/<b>register.php</b>/<b>logout.php</b> - řešení přihlášení/registrace/odhlášení uživatelů </li>
+	<li><b>session_exp_home.php</b> a <b>session_expiration.php</b> - řešení doby činnosti/nečinnosti</p></li>
+</ul>
+
+
+<h3>Databáze</h3>
+
+<img src="./images/schemaRelDatabaze.png" width="600">
+
+<h2>Instalace</h2>
+<p>Požadovaná verze PHP: 8.1 <b></b></p>
+
+<h4>Postup:</h4> 
+<ul>
+<li>Archiv rozbalíme v libovolným softwarem pro práci s archivy (např. WinRAR, 7ZIP).</li>
+<li>Vše z daného archivu přeneseme na námi zvolený server, který podporuje danou verzi PHP.</li>
+<li>V soubore <b>config.php</b> nastavíme přihlasovací údaje pro přístup do databáze, kterou hodláme používat.</li>
+<li>Následně nad databází spustíme SQLScript.sql, který vytvoří požadované tabulky, které následně zaplní testovacími daty. Spustíme index.php.</li>
+</ul>
+
+<h2>Známé problémy</h2>
+<p>Po spuštění naší aplikace na serveru Eva, nám při ukládání obrázku není automaticky přidělované potřebné právo pro čtení obrázku. Nepomohlo ani použití příkazu <i>chmod</i>.</p>
+</body></html>
